@@ -1,0 +1,41 @@
+.container {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+    color: var(--textSoft);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2e374a;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.icons{
+    display: flex;
+    gap: 0px;
+    
+}
+
+.input{
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+    outline: none;
+}

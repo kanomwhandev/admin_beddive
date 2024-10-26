@@ -1,0 +1,14 @@
+.container{
+     padding: 25px;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     border-radius: 15px;
+     margin:5px 0px;
+     border-radius: 10px;
+}
+
+.container:hover{
+    background-color: #2e374a;
+}
+

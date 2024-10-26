@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  id         Int       @id @default(autoincrement())
+  title      String
+  content    String
+  imageUrl   String
+  author     String
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId Int?
+}
+
+model Category {
+  id     Int     @id @default(autoincrement())
+  name   String  @unique
+  posts  Post[]
+  sounds Sound[]
+}
+
+model Sound {
+  id         Int       @id @default(autoincrement())
+  title      String
+  filePath   String
+  fileName   String
+  fileSize   Int
+  fileUrl    String
+  author     String?
+  duration   Float? // ทำให้เป็น optional ด้วยการเพิ่ม ?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  Category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId Int?
+  audioFile  String
+}

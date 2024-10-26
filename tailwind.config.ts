@@ -11,7 +11,14 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: {
+          DEFAULT: '#00a7e1',
+          hover: '#0077be',
+        }
       },
+      fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+      }
     },
   },
   plugins: [],

@@ -8,7 +8,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
     const sound = await prisma.sound.findUnique({
       where: { id: parseInt(params.id) },
       include: {
-        Category: true, // Include the Category in the response
+        Category: true,
       },
     });
 
